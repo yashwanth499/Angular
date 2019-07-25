@@ -25,9 +25,9 @@ export class AppComponent {
   checkObject(obj) {
     if (this.arr.indexOf(obj) >= 0) return;
     this.arr.push(obj);
-    var keys = Object.keys(obj);
+    let keys = Object.keys(obj);
     for (var i = 0, l = keys.length; i < l; i++) {
-      var key = keys[i];
+      let key = keys[i];
       this.allKeys[key] = true;
       this.checkValue(obj[key]);
     }
@@ -46,7 +46,7 @@ export class AppComponent {
     let obj = {}
     stringArray.forEach(element => {
       for (var x = 0; x < element.length; x++) {
-        var l = element.charAt(x)
+        let l = element.charAt(x)
         obj[l] = (isNaN(obj[l]) ? 1 : obj[l] + 1);
       }
     });
@@ -66,7 +66,7 @@ export class AppComponent {
   }
 
   reverseString(str) {
-    var newString = [];
+    let newString = [];
     str.forEach(element => {
       for (var i = element.length - 1; i >= 0; i--) {
         newString.push(element[i]);
